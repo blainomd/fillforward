@@ -117,7 +117,7 @@ export default function Home() {
               <p className="text-bark-light text-sm">cans or bottles<br />in the landfill</p>
             </div>
             <div className="p-8 bg-cream rounded-2xl">
-              <div className="text-5xl font-bold text-amber-dark mb-2">87,600</div>
+              <div className="text-5xl font-bold text-amber-dark mb-2">219,000</div>
               <p className="text-bark-light text-sm">empty calories<br />per year</p>
             </div>
           </div>
@@ -216,8 +216,8 @@ export default function Home() {
               </div>
               <div className="w-px h-10 bg-amber-light" />
               <div>
-                <div className="text-3xl font-bold text-amber-dark">175 lbs</div>
-                <div className="text-xs text-bark-light">fewer body weight</div>
+                <div className="text-3xl font-bold text-amber-dark">50 lbs</div>
+                <div className="text-xs text-bark-light">potential weight loss/yr</div>
               </div>
             </div>
           </div>
