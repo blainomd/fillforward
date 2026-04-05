@@ -495,35 +495,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 41,683 */}
+      <section className="py-24 px-6 bg-bark text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="text-8xl sm:text-9xl font-bold text-amber mb-4 tracking-tight">
+            41,683
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+            zip codes in America.
+            <br />
+            <span className="text-white/50">One garage tap in each.</span>
+          </h2>
+          <p className="text-white/40 leading-relaxed max-w-xl mx-auto mb-12">
+            That&apos;s the mission. A co-op.care kombucha garage in every zip code.
+            Community-owned. Zero waste. Funded by the health outcomes
+            they create. Every growler filled is a can that never existed,
+            a neighbor who knows your name, and a caregiver who&apos;s already
+            in the network when you need one.
+          </p>
+
+          <div className="grid grid-cols-4 gap-4 max-w-lg mx-auto mb-12">
+            <div className="bg-white/5 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-amber">10</div>
+              <div className="text-[10px] text-white/30 mt-1">Boulder<br/>2026</div>
+            </div>
+            <div className="bg-white/5 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-amber">100</div>
+              <div className="text-[10px] text-white/30 mt-1">Colorado<br/>2027</div>
+            </div>
+            <div className="bg-white/5 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-amber">1,000</div>
+              <div className="text-[10px] text-white/30 mt-1">Mountain West<br/>2028</div>
+            </div>
+            <div className="bg-white/5 rounded-xl p-4 text-center">
+              <div className="text-2xl font-bold text-amber">41,683</div>
+              <div className="text-[10px] text-white/30 mt-1">Every zip<br/>2030</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The Mission */}
       <section className="py-20 px-6 bg-amber-dark text-white">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-amber-light/50 mb-4">
-            The Mission
+            A co-op.care Health Program
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Rid the world of single use.
           </h2>
           <p className="text-amber-light/80 leading-relaxed text-lg mb-4">
-            Single-use bottles. Single-use cans. Single-use relationships
-            that end when the transaction does.
+            Single-use bottles. Single-use cans. Single-use caregivers
+            who leave in six months. Single-use relationships that end
+            when the transaction does.
           </p>
           <p className="text-amber-light/80 leading-relaxed text-lg">
-            Fill Forward is part of co-op.care — a cooperative where
-            your kombucha, your caregiver, and your neighbor are all
-            part of the same network. You own it. You fill it. You
-            pass it forward.
+            Fill Forward is a co-op.care health program — a cooperative where
+            your kombucha, your smart scale, your caregiver, and your
+            neighbor are all part of the same network. You own it.
+            You fill it. You pass it forward.
           </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <a href="https://co-op.care" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+              co-op.care ↗
+            </a>
+            <a href="https://comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+              ComfortCard ↗
+            </a>
+            <a href="https://sh-room.com" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+              Sh-Room ↗
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Notify CTA */}
-      <section id="notify" className="py-20 px-6 bg-bark text-white">
+      <section id="notify" className="py-20 px-6 bg-cream">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-bark mb-4">
             First garage. Boulder. 2026.
           </h2>
-          <p className="text-white/50 mb-8">
+          <p className="text-bark-light mb-8">
             10 neighbors. 1 keg. $2.50/pint. Zero waste.
             Get notified when we open the first tap.
           </p>
