@@ -341,6 +341,160 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BALANCE + Scale */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-amber-light/50 rounded-full text-xs font-medium text-amber-dark mb-6">
+              Medicare BALANCE Program &middot; July 2026
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-bark">
+              Step on the scale.
+              <br />
+              <span className="text-amber-dark">The growler did the work.</span>
+            </h2>
+            <p className="mt-4 text-bark-light text-lg max-w-2xl mx-auto">
+              Replace 600 calories of beer with 120 calories of kombucha every night.
+              Your smart scale tracks the result. Your physician attests to it.
+              Medicare pays $50/month for the outcome you wanted anyway.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {/* Scale + ComfortCard integration */}
+            <div className="bg-cream rounded-2xl p-8">
+              <h3 className="font-bold text-bark mb-6">Your morning.</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
+                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
+                      <rect x="4" y="8" width="16" height="12" rx="2" />
+                      <path d="M12 12v4" />
+                      <path d="M9 14h6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-bark">Step on smart scale</div>
+                    <div className="text-xs text-bark-light">Withings or Renpho &middot; $40 from your garage node</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
+                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-bark">Weight syncs to ComfortCard</div>
+                    <div className="text-xs text-bark-light">Bluetooth &rarr; automatic &rarr; no app needed</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
+                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
+                      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 00-3-3.87" />
+                      <path d="M16 3.13a4 4 0 010 7.75" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-bark">Physician reviews weekly</div>
+                    <div className="text-xs text-bark-light">5 min/week &middot; clinically attested</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
+                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-bark">Medicare pays $50/month</div>
+                    <div className="text-xs text-bark-light">BALANCE program &middot; for the outcome you already created</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Wallet mockup */}
+            <div className="bg-bark rounded-2xl p-8 text-white">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-bold">ComfortCard</h3>
+                <span className="text-xs text-white/30">BALANCE enrolled</span>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/50">Current weight</span>
+                  <span className="font-medium">198.4 lbs</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/50">Start weight</span>
+                  <span className="text-white/40">213.0 lbs</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/50">Progress</span>
+                  <span className="font-medium text-amber-light">-14.6 lbs</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/50">Target BMI</span>
+                  <span className="text-white/40">28.0 &rarr; 25.0</span>
+                </div>
+              </div>
+
+              {/* Mini trend line */}
+              <div className="bg-white/5 rounded-xl p-4 mb-6">
+                <div className="text-xs text-white/30 mb-3">90-day trend</div>
+                <svg viewBox="0 0 200 50" className="w-full h-12">
+                  <polyline
+                    points="0,5 15,8 30,6 45,12 60,10 75,15 90,18 105,20 120,22 135,28 150,30 165,35 180,38 200,42"
+                    fill="none"
+                    stroke="#D97706"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="200" cy="42" r="3" fill="#D97706" />
+                </svg>
+                <div className="flex justify-between text-[10px] text-white/20 mt-1">
+                  <span>Jan 5</span>
+                  <span>Today</span>
+                </div>
+              </div>
+
+              <div className="space-y-2 pt-4 border-t border-white/10">
+                <div className="text-xs text-white/30 mb-2">Recent</div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-white/50">Today 6:42 AM</span>
+                  <span>198.4 lbs</span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-white/50">Yesterday</span>
+                  <span>199.1 lbs</span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-white/50">Apr 2</span>
+                  <span>199.8 lbs</span>
+                </div>
+              </div>
+
+              <div className="mt-6 p-3 bg-amber-dark/30 rounded-xl border border-amber/20 text-center">
+                <div className="text-xs text-amber-light/70">BALANCE reimbursement this month</div>
+                <div className="text-lg font-bold text-amber-light">$50.00</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm text-bark-light max-w-xl mx-auto">
+              Scale goes silent for 7 days? That&apos;s a check-in trigger.
+              Same signal as &ldquo;she stopped coming for kombucha on Tuesdays.&rdquo;
+              The cooperative notices. The caregiver calls. That&apos;s the network.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* The Mission */}
       <section className="py-20 px-6 bg-amber-dark text-white">
         <div className="max-w-2xl mx-auto text-center">
