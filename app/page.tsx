@@ -585,6 +585,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Connector */}
+      <section id="connector" className="py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-bark mb-4">
+            Get the Fill Forward connector
+          </h2>
+          <p className="text-bark-light text-lg mb-8 max-w-xl mx-auto">
+            Add the SolvingHealth connector to Claude and get instant access to cooperative tools, HSA savings estimates, and community services.
+          </p>
+          <div className="bg-cream rounded-2xl border border-amber-light/30 p-6 text-left max-w-lg mx-auto mb-8">
+            <p className="text-xs font-medium text-bark-light/50 uppercase tracking-wider mb-3">Claude Desktop MCP Config</p>
+            <pre className="text-sm text-bark overflow-x-auto whitespace-pre font-mono leading-relaxed">{`"fillforward": {
+  "command": "npx",
+  "args": ["-y", "@anthropic-ai/mcp-remote",
+    "https://solvinghealth.com/mcp"]
+}`}</pre>
+          </div>
+          <p className="text-bark-light text-sm">
+            Don&apos;t have Claude? Get it free at{" "}
+            <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" className="text-amber-dark font-medium hover:underline">claude.ai</a>
+            {" "}or use the chat and voice widgets on this page.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-bark border-t border-white/5 py-8 px-6">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-4">
