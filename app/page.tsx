@@ -1,54 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
-function EmailForm({ variant = "light" }: { variant?: "light" | "dark" }) {
-  const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
-
-  if (done) {
-    return (
-      <div
-        className={`flex items-center gap-2 px-4 py-3 rounded-full text-sm font-medium ${
-          variant === "dark" ? "bg-white/10 text-white" : "bg-amber-50 text-amber-dark"
-        }`}
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 13l4 4L19 7" /></svg>
-        You&apos;re on the list. First pour is on us.
-      </div>
-    );
-  }
-
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); if (email) setDone(true); }}
-      className="flex flex-col sm:flex-row gap-3 w-full max-w-md"
-    >
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="your@email.com"
-        required
-        className={`flex-1 px-5 py-3 rounded-full text-sm outline-none transition-all ${
-          variant === "dark"
-            ? "bg-white/10 text-white placeholder:text-white/40 border border-white/20 focus:border-white/50"
-            : "bg-white text-bark placeholder:text-bark-light/50 border border-amber-light focus:border-amber"
-        }`}
-      />
-      <button
-        type="submit"
-        className={`px-6 py-3 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
-          variant === "dark"
-            ? "bg-white text-amber-dark hover:bg-amber-50"
-            : "bg-amber-dark text-white hover:bg-bark"
-        }`}
-      >
-        Get Notified
-      </button>
-    </form>
-  );
-}
 
 export default function Home() {
   return (
@@ -91,7 +42,15 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <EmailForm variant="light" />
+            <button
+              onClick={() => {
+                const btn = document.getElementById('sh-chat-btn');
+                if (btn) btn.click();
+              }}
+              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors cursor-pointer"
+            >
+              Talk to Sage about Fill Forward
+            </button>
           </div>
         </div>
       </section>
@@ -580,7 +539,15 @@ export default function Home() {
             Get notified when we open the first tap.
           </p>
           <div className="flex justify-center mb-6">
-            <EmailForm variant="dark" />
+            <button
+              onClick={() => {
+                const btn = document.getElementById('sh-chat-btn');
+                if (btn) btn.click();
+              }}
+              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors cursor-pointer"
+            >
+              Get started with Sage
+            </button>
           </div>
         </div>
       </section>
@@ -618,12 +585,9 @@ export default function Home() {
             <a href="https://www.co-op.care" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">co-op.care</a>
             <a href="https://www.sh-room.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">sh-room.com</a>
             <a href="https://www.comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">comfortcard.org</a>
-            <a href="https://www.co-op.care" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">caregoals.com</a>
             <a href="https://www.surgeonvalue.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">surgeonvalue.com</a>
             <a href="https://www.solvinghealth.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">solvinghealth.com</a>
             <a href="https://www.doesyourbackhurt.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">doesyourbackhurt.com</a>
-            <a href="https://www.surgeonvalue.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">themissedcode.com</a>
-            <a href="https://www.comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">lastconversation.org</a>
           </div>
           <p className="text-white/15 text-xs">Built entirely by AI. Boulder, CO.</p>
         </div>
