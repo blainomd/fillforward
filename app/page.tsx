@@ -556,13 +556,13 @@ export default function Home() {
             You fill it. You pass it forward.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <a href="https://co-op.care" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+            <a href="https://www.co-op.care" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
               co-op.care ↗
             </a>
-            <a href="https://comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+            <a href="https://www.comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
               ComfortCard ↗
             </a>
-            <a href="https://sh-room.com" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
+            <a href="https://www.sh-room.com" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-light/60 hover:text-white transition-colors">
               Sh-Room ↗
             </a>
           </div>
@@ -599,7 +599,7 @@ export default function Home() {
             <pre className="text-sm text-bark overflow-x-auto whitespace-pre font-mono leading-relaxed">{`"fillforward": {
   "command": "npx",
   "args": ["-y", "@anthropic-ai/mcp-remote",
-    "https://solvinghealth.com/mcp"]
+    "https://www.solvinghealth.com/mcp"]
 }`}</pre>
           </div>
           <p className="text-bark-light text-sm">
@@ -615,15 +615,15 @@ export default function Home() {
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-4">
           <span className="text-white/30 text-xs">Fill Forward is a co-op.care initiative</span>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs">
-            <a href="https://co-op.care" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">co-op.care</a>
-            <a href="https://sh-room.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">sh-room.com</a>
-            <a href="https://comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">comfortcard.org</a>
-            <a href="https://caregoals.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">caregoals.com</a>
-            <a href="https://surgeonvalue.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">surgeonvalue.com</a>
-            <a href="https://solvinghealth.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">solvinghealth.com</a>
-            <a href="https://doesyourbackhurt.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">doesyourbackhurt.com</a>
-            <a href="https://themissedcode.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">themissedcode.com</a>
-            <a href="https://lastconversation.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">lastconversation.org</a>
+            <a href="https://www.co-op.care" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">co-op.care</a>
+            <a href="https://www.sh-room.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">sh-room.com</a>
+            <a href="https://www.comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">comfortcard.org</a>
+            <a href="https://www.co-op.care" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">caregoals.com</a>
+            <a href="https://www.surgeonvalue.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">surgeonvalue.com</a>
+            <a href="https://www.solvinghealth.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">solvinghealth.com</a>
+            <a href="https://www.doesyourbackhurt.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">doesyourbackhurt.com</a>
+            <a href="https://www.surgeonvalue.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">themissedcode.com</a>
+            <a href="https://www.comfortcard.org" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/50 transition-colors">lastconversation.org</a>
           </div>
           <p className="text-white/15 text-xs">Built entirely by AI. Boulder, CO.</p>
         </div>

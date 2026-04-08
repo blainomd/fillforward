@@ -40,8 +40,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
-        <Script src="https://solvinghealth.com/chat-widget.js" data-channel="fillforward" data-color="#2D5016" strategy="lazyOnload" />
-        <Script src="https://solvinghealth.com/voice-embed.js" data-site="fillforward" strategy="lazyOnload" />
+        <Script src="https://www.solvinghealth.com/chat-widget.js" data-channel="fillforward" data-color="#2D5016" strategy="lazyOnload" />
+        <Script src="https://www.solvinghealth.com/voice-embed.js" data-site="fillforward" strategy="lazyOnload" />
       </body>
     </html>
   );
