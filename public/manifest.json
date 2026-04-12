@@ -1,0 +1,12 @@
+{
+  "name": "FillForward",
+  "short_name": "FillFwd",
+  "description": "Your medication companion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8ff",
+  "theme_color": "#00595c",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
