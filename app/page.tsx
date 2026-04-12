@@ -552,6 +552,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HarnessHealth Action Band */}
+      <section className="py-16 px-6 border-t border-gray-100 bg-cream">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-bark mb-2">
+            Ready to take the next step?
+          </h2>
+          <p className="text-bark-light mb-8 text-sm">
+            Check in for your upcoming visit, find a specialist, or save money on care with a ComfortCard.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+            <a
+              href="https://harnesshealth.ai/checkin"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-white font-bold bg-amber-dark transition-all hover:opacity-90 text-sm"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Check in for your visit
+            </a>
+            <a
+              href="https://harnesshealth.ai/find"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-amber-dark text-amber-dark transition-all hover:opacity-90 text-sm"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              Find a specialist
+            </a>
+            <a
+              href="https://comfortcard.org"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-gray-200 text-bark transition-all hover:opacity-90 text-sm"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+              Save with ComfortCard
+            </a>
+          </div>
+          <p className="mt-6 text-xs text-bark-light/50">
+            Is your care HSA-eligible?{" "}
+            <a href="https://hsaletter.com" className="font-medium text-amber-dark hover:underline">
+              Check at hsaletter.com
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Connector */}
       <section id="connector" className="py-20 px-6 bg-white">
         <div className="max-w-3xl mx-auto text-center">
