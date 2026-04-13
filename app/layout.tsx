@@ -43,9 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
-        <Script src="https://www.solvinghealth.com/voice-embed.js" data-site="fillforward" strategy="lazyOnload" />
-          <Script src="https://harnesshealth.ai/harness.js" strategy="lazyOnload" />
-      </body>
+        <Script src="https://www.solvinghealth.com/voice-embed.js" data-site="fillforward" strategy="lazyOnload" /></body>
     </html>
   );
 }
