@@ -1,7 +1,16 @@
 "use client";
 
+import { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleWaitlist(e: React.FormEvent) {
+    e.preventDefault();
+    if (email) setSubmitted(true);
+  }
+
   return (
     <div className="min-h-screen">
       {/* Nav */}
@@ -42,15 +51,12 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <button
-              onClick={() => {
-                const btn = document.getElementById('sh-chat-btn');
-                if (btn) btn.click();
-              }}
-              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors cursor-pointer"
+            <a
+              href="#notify"
+              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors"
             >
-              Talk to Sage about Fill Forward
-            </button>
+              Join the Boulder waitlist
+            </a>
           </div>
         </div>
       </section>
@@ -301,201 +307,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BALANCE + Scale */}
+      {/* Starting in Boulder */}
       <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 border border-amber-light/50 rounded-full text-xs font-medium text-amber-dark mb-6">
-              Medicare BALANCE Program &middot; July 2026
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-bark">
-              Step on the scale.
-              <br />
-              <span className="text-amber-dark">The growler did the work.</span>
-            </h2>
-            <p className="mt-4 text-bark-light text-lg max-w-2xl mx-auto">
-              Replace 600 calories of beer with 60 calories of kombucha every night.
-              Your smart scale tracks the result. Your physician attests to it.
-              Medicare pays $50/month for the outcome you wanted anyway.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {/* Scale + ComfortCard integration */}
-            <div className="bg-cream rounded-2xl p-8">
-              <h3 className="font-bold text-bark mb-6">Your morning.</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
-                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
-                      <rect x="4" y="8" width="16" height="12" rx="2" />
-                      <path d="M12 12v4" />
-                      <path d="M9 14h6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-bark">Step on smart scale</div>
-                    <div className="text-xs text-bark-light">Withings or Renpho &middot; $40 from your garage node</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
-                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
-                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-bark">Weight syncs to ComfortCard</div>
-                    <div className="text-xs text-bark-light">Bluetooth &rarr; automatic &rarr; no app needed</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
-                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
-                      <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 00-3-3.87" />
-                      <path d="M16 3.13a4 4 0 010 7.75" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-bark">Physician reviews weekly</div>
-                    <div className="text-xs text-bark-light">5 min/week &middot; clinically attested</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-3 bg-white rounded-xl">
-                  <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center shrink-0">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-dark">
-                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-bark">Medicare pays $50/month</div>
-                    <div className="text-xs text-bark-light">BALANCE program &middot; for the outcome you already created</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Wallet mockup */}
-            <div className="bg-bark rounded-2xl p-8 text-white">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-bold">ComfortCard</h3>
-                <span className="text-xs text-white/30">BALANCE enrolled</span>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Current weight</span>
-                  <span className="font-medium">198.4 lbs</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Start weight</span>
-                  <span className="text-white/40">213.0 lbs</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Progress</span>
-                  <span className="font-medium text-amber-light">-14.6 lbs</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-white/50">Target BMI</span>
-                  <span className="text-white/40">28.0 &rarr; 25.0</span>
-                </div>
-              </div>
-
-              {/* Mini trend line */}
-              <div className="bg-white/5 rounded-xl p-4 mb-6">
-                <div className="text-xs text-white/30 mb-3">90-day trend</div>
-                <svg viewBox="0 0 200 50" className="w-full h-12">
-                  <polyline
-                    points="0,5 15,8 30,6 45,12 60,10 75,15 90,18 105,20 120,22 135,28 150,30 165,35 180,38 200,42"
-                    fill="none"
-                    stroke="#D97706"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="200" cy="42" r="3" fill="#D97706" />
-                </svg>
-                <div className="flex justify-between text-[10px] text-white/20 mt-1">
-                  <span>Jan 5</span>
-                  <span>Today</span>
-                </div>
-              </div>
-
-              <div className="space-y-2 pt-4 border-t border-white/10">
-                <div className="text-xs text-white/30 mb-2">Recent</div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-white/50">Today 6:42 AM</span>
-                  <span>198.4 lbs</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-white/50">Yesterday</span>
-                  <span>199.1 lbs</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-white/50">Apr 2</span>
-                  <span>199.8 lbs</span>
-                </div>
-              </div>
-
-              <div className="mt-6 p-3 bg-amber-dark/30 rounded-xl border border-amber/20 text-center">
-                <div className="text-xs text-amber-light/70">BALANCE reimbursement this month</div>
-                <div className="text-lg font-bold text-amber-light">$50.00</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-bark-light max-w-xl mx-auto">
-              Scale goes silent for 7 days? That&apos;s a check-in trigger.
-              Same signal as &ldquo;she stopped coming for kombucha on Tuesdays.&rdquo;
-              The cooperative notices. The caregiver calls. That&apos;s the network.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 41,683 */}
-      <section className="py-24 px-6 bg-bark text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-8xl sm:text-9xl font-bold text-amber mb-4 tracking-tight">
-            41,683
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-            zip codes in America.
-            <br />
-            <span className="text-white/50">One garage tap in each.</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-bark mb-6">
+            Starting in Boulder, CO.
           </h2>
-          <p className="text-white/40 leading-relaxed max-w-xl mx-auto mb-12">
-            That&apos;s the mission. A co-op.care kombucha garage in every zip code.
-            Community-owned. Zero waste. Funded by the health outcomes
-            they create. Every growler filled is a can that never existed,
-            a neighbor who knows your name, and a caregiver who&apos;s already
-            in the network when you need one.
+          <p className="text-bark-light text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+            This is a small thing. One neighborhood. One keg. Ten neighbors who
+            walk instead of drive and fill instead of throw away. If that works,
+            we do it again in the next neighborhood. That&apos;s the whole plan.
           </p>
 
-          <div className="grid grid-cols-4 gap-4 max-w-lg mx-auto mb-12">
-            <div className="bg-white/5 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-amber">10</div>
-              <div className="text-[10px] text-white/30 mt-1">Boulder<br/>2026</div>
+          <div className="grid sm:grid-cols-3 gap-6 text-center">
+            <div className="p-6 bg-cream rounded-2xl">
+              <div className="text-4xl font-bold text-amber-dark mb-2">10</div>
+              <p className="text-bark-light text-sm">neighbors per garage node</p>
             </div>
-            <div className="bg-white/5 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-amber">100</div>
-              <div className="text-[10px] text-white/30 mt-1">Colorado<br/>2027</div>
+            <div className="p-6 bg-cream rounded-2xl">
+              <div className="text-4xl font-bold text-amber-dark mb-2">1 keg</div>
+              <p className="text-bark-light text-sm">swapped every week</p>
             </div>
-            <div className="bg-white/5 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-amber">1,000</div>
-              <div className="text-[10px] text-white/30 mt-1">Mountain West<br/>2028</div>
-            </div>
-            <div className="bg-white/5 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-amber">41,683</div>
-              <div className="text-[10px] text-white/30 mt-1">Every zip<br/>2030</div>
+            <div className="p-6 bg-cream rounded-2xl">
+              <div className="text-4xl font-bold text-amber-dark mb-2">$2.50</div>
+              <p className="text-bark-light text-sm">per pint, member-owned</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Mission */}
+            {/* The Mission */}
       <section className="py-20 px-6 bg-amber-dark text-white">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-amber-light/50 mb-4">
@@ -505,14 +346,13 @@ export default function Home() {
             Rid the world of single use.
           </h2>
           <p className="text-amber-light/80 leading-relaxed text-lg mb-4">
-            Single-use bottles. Single-use cans. Single-use caregivers
-            who leave in six months. Single-use relationships that end
-            when the transaction does.
+            Single-use bottles. Single-use cans. Single-use relationships
+            that end when the transaction does.
           </p>
           <p className="text-amber-light/80 leading-relaxed text-lg">
-            Fill Forward is a co-op.care health program — a cooperative where
-            your kombucha, your smart scale, your caregiver, and your
-            neighbor are all part of the same network. You own it.
+            Fill Forward is a co-op.care initiative — a cooperative where
+            your kombucha tap, your growler, and your neighbor
+            are all part of the same network. You own it.
             You fill it. You pass it forward.
           </p>
           <div className="mt-8 flex justify-center gap-4">
@@ -531,25 +371,39 @@ export default function Home() {
 
       {/* Notify CTA */}
       <section id="notify" className="py-20 px-6 bg-cream">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-bark mb-4">
             First garage. Boulder. 2026.
           </h2>
           <p className="text-bark-light mb-8">
-            10 neighbors. 1 keg. $2.50/pint. Zero waste.
-            Get notified when we open the first tap.
+            We&apos;re looking for 10 founding neighbors in Boulder.
+            One keg. $2.50/pint. Zero waste. Leave your email and
+            we&apos;ll reach out when the first tap opens.
           </p>
-          <div className="flex justify-center mb-6">
-            <button
-              onClick={() => {
-                const btn = document.getElementById('sh-chat-btn');
-                if (btn) btn.click();
-              }}
-              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors cursor-pointer"
-            >
-              Get started with Sage
-            </button>
-          </div>
+          {submitted ? (
+            <div className="bg-amber-50 border border-amber-light/50 rounded-2xl p-8">
+              <p className="font-bold text-bark text-lg mb-1">You&apos;re on the list.</p>
+              <p className="text-bark-light text-sm">We&apos;ll be in touch when the first tap opens in Boulder.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                className="flex-1 px-5 py-3 rounded-full border border-amber-light/50 bg-white text-bark placeholder:text-bark-light/40 focus:outline-none focus:ring-2 focus:ring-amber-dark/30 text-sm"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 rounded-full font-medium bg-amber-dark text-white hover:bg-bark transition-colors text-sm whitespace-nowrap"
+              >
+                Join the waitlist
+              </button>
+            </form>
+          )}
+          <p className="mt-4 text-xs text-bark-light/50">Boulder, CO only for now. No spam. Unsubscribe any time.</p>
         </div>
       </section>
 
