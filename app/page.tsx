@@ -101,7 +101,7 @@ export default function Home() {
               Same evening. Different growler.
             </h2>
             <p className="mt-4 text-bark-light text-lg">
-              64 ounces of kombucha is a full evening. You&apos;re full. You&apos;re satisfied.
+              A 32-ounce growler is a full evening. You&apos;re full. You&apos;re satisfied.
               Beer never entered the picture.
             </p>
           </div>
@@ -140,24 +140,24 @@ export default function Home() {
               <div className="space-y-3 text-sm text-amber-light/80">
                 <div className="flex justify-between py-2 border-b border-white/10">
                   <span>6:00 PM &mdash; First pour</span>
-                  <span className="text-amber-light/40">16oz</span>
+                  <span className="text-amber-light/40">16oz (1 pint)</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-white/10">
-                  <span>6:45 PM &mdash; Second pour with dinner</span>
-                  <span className="text-amber-light/40">16oz</span>
+                  <span>7:00 PM &mdash; Second pour with dinner</span>
+                  <span className="text-amber-light/40">16oz (1 pint)</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-white/10">
-                  <span>7:30 PM &mdash; Third pour on the couch</span>
-                  <span className="text-amber-light/40">16oz</span>
+                  <span>&nbsp;</span>
+                  <span className="text-amber-light/20">&nbsp;</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span>8:15 PM &mdash; Last pour. Growler empty.</span>
-                  <span className="text-amber-light/40">16oz</span>
+                  <span>Growler empty. Done for the night.</span>
+                  <span className="text-amber-light/40">32oz</span>
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-white/10 flex justify-between text-sm">
                 <span className="text-amber-light/60">Total</span>
-                <span className="font-bold text-white">$5 &middot; 0 cans &middot; 120 cal</span>
+                <span className="font-bold text-white">$5 &middot; 0 cans &middot; 60 cal</span>
               </div>
             </div>
           </div>
@@ -175,8 +175,8 @@ export default function Home() {
               </div>
               <div className="w-px h-10 bg-amber-light" />
               <div>
-                <div className="text-3xl font-bold text-amber-dark">50 lbs</div>
-                <div className="text-xs text-bark-light">potential weight loss/yr</div>
+                <div className="text-3xl font-bold text-amber-dark">540 cal</div>
+                <div className="text-xs text-bark-light">fewer per day</div>
               </div>
             </div>
           </div>
@@ -313,7 +313,7 @@ export default function Home() {
               <span className="text-amber-dark">The growler did the work.</span>
             </h2>
             <p className="mt-4 text-bark-light text-lg max-w-2xl mx-auto">
-              Replace 600 calories of beer with 120 calories of kombucha every night.
+              Replace 600 calories of beer with 60 calories of kombucha every night.
               Your smart scale tracks the result. Your physician attests to it.
               Medicare pays $50/month for the outcome you wanted anyway.
             </p>
@@ -552,44 +552,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HarnessHealth Action Band */}
-      <section className="py-16 px-6 border-t border-gray-100 bg-cream">
+      {/* Ecosystem Band */}
+      <section className="py-16 px-6 border-t border-amber-light/20 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-bark mb-2">
-            Ready to take the next step?
-          </h2>
-          <p className="text-bark-light mb-8 text-sm">
-            Check in for your upcoming visit, find a specialist, or save money on care with a ComfortCard.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+          <p className="text-xs tracking-[0.25em] uppercase text-bark-light/40 mb-6">Part of the co-op.care ecosystem</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <a
-              href="https://harnesshealth.ai/checkin"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-white font-bold bg-amber-dark transition-all hover:opacity-90 text-sm"
+              href="https://co-op.care"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-white font-medium bg-bark transition-all hover:bg-amber-dark text-sm"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              Check in for your visit
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline strokeLinecap="round" strokeLinejoin="round" points="9 22 9 12 15 12 15 22" /></svg>
+              co-op.care — aging care at home
             </a>
             <a
-              href="https://harnesshealth.ai/find"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-amber-dark text-amber-dark transition-all hover:opacity-90 text-sm"
+              href="https://solvinghealth.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium border border-bark/20 text-bark transition-all hover:border-amber-dark text-sm"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              Find a specialist
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              solvinghealth.com — the platform
             </a>
             <a
-              href="https://comfortcard.org"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-gray-200 text-bark transition-all hover:opacity-90 text-sm"
+              href="https://sh-room.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium border border-bark/20 text-bark transition-all hover:border-amber-dark text-sm"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-              Save with ComfortCard
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><circle cx="12" cy="12" r="3" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 2C8 2 5 6 5 10c0 3 2 5.5 5 6.5V19h4v-2.5c3-1 5-3.5 5-6.5 0-4-3-8-7-8z" /></svg>
+              sh-room.com — grow your own
             </a>
           </div>
-          <p className="mt-6 text-xs text-bark-light/50">
-            Is your care HSA-eligible?{" "}
-            <a href="https://hsaletter.com" className="font-medium text-amber-dark hover:underline">
-              Check at hsaletter.com
-            </a>
-          </p>
         </div>
       </section>
 
