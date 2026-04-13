@@ -205,7 +205,7 @@ export default function Home() {
               {
                 step: "03",
                 title: "You walk over with your growler",
-                desc: "64oz glass growler. Fill it up. $5. Walk home. That's your evening sorted. Bring it back empty next time.",
+                desc: "32oz glass growler. Fill it up. $5. Walk home. That's your evening sorted. Bring it back empty next time.",
               },
               {
                 step: "04",
@@ -258,7 +258,8 @@ export default function Home() {
                 <div className="flex justify-between"><span className="text-white/50">Kombucha</span><span>$0.80</span></div>
                 <div className="flex justify-between"><span className="text-white/50">Bottle</span><span className="text-amber-light">$0 (your growler)</span></div>
                 <div className="flex justify-between"><span className="text-white/50">Label</span><span className="text-amber-light">$0</span></div>
-                <div className="flex justify-between"><span className="text-white/50">Distributor</span><span className="text-amber-light">$0 (co-op route)</span></div>
+                <div className="flex justify-between"><span className="text-white/50">Keg delivery + service</span><span>$0.60</span></div>
+                <div className="flex justify-between"><span className="text-white/50">Tap host stipend</span><span>$0.47</span></div>
                 <div className="flex justify-between"><span className="text-white/50">Retail margin</span><span className="text-amber-light">$0 (no store)</span></div>
                 <div className="flex justify-between"><span className="text-white/50">Co-op margin</span><span>$0.55</span></div>
                 <div className="flex justify-between"><span className="text-white/50">Equity accrual (3%)</span><span>$0.08</span></div>
@@ -558,7 +559,7 @@ export default function Home() {
           <p className="text-xs tracking-[0.25em] uppercase text-bark-light/40 mb-6">Part of the co-op.care ecosystem</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <a
-              href="https://co-op.care"
+              href="https://www.co-op.care"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-white font-medium bg-bark transition-all hover:bg-amber-dark text-sm"
@@ -567,7 +568,7 @@ export default function Home() {
               co-op.care — aging care at home
             </a>
             <a
-              href="https://solvinghealth.com"
+              href="https://www.solvinghealth.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium border border-bark/20 text-bark transition-all hover:border-amber-dark text-sm"
@@ -576,7 +577,7 @@ export default function Home() {
               solvinghealth.com — the platform
             </a>
             <a
-              href="https://sh-room.com"
+              href="https://www.sh-room.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium border border-bark/20 text-bark transition-all hover:border-amber-dark text-sm"
