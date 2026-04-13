@@ -5,10 +5,30 @@ import { useState } from "react";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function handleWaitlist(e: React.FormEvent) {
+  async function handleWaitlist(e: React.FormEvent) {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email || submitting) return;
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, source: "fillforward-site" }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json();
+        setSubmitError(data.error || "Something went wrong. Try again.");
+      }
+    } catch {
+      setSubmitError("Network error. Try again.");
+    }
+    setSubmitting(false);
   }
 
   return (
@@ -386,22 +406,29 @@ export default function Home() {
               <p className="text-bark-light text-sm">We&apos;ll be in touch when the first tap opens in Boulder.</p>
             </div>
           ) : (
-            <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="flex-1 px-5 py-3 rounded-full border border-amber-light/50 bg-white text-bark placeholder:text-bark-light/40 focus:outline-none focus:ring-2 focus:ring-amber-dark/30 text-sm"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 rounded-full font-medium bg-amber-dark text-white hover:bg-bark transition-colors text-sm whitespace-nowrap"
-              >
-                Join the waitlist
-              </button>
-            </form>
+            <div className="flex flex-col items-center gap-3 max-w-md mx-auto">
+              <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3 w-full">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  disabled={submitting}
+                  className="flex-1 px-5 py-3 rounded-full border border-amber-light/50 bg-white text-bark placeholder:text-bark-light/40 focus:outline-none focus:ring-2 focus:ring-amber-dark/30 text-sm disabled:opacity-60"
+                />
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="px-6 py-3 rounded-full font-medium bg-amber-dark text-white hover:bg-bark transition-colors text-sm whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {submitting ? "Joining..." : "Join the waitlist"}
+                </button>
+              </form>
+              {submitError && (
+                <p className="text-xs text-red-500">{submitError}</p>
+              )}
+            </div>
           )}
           <p className="mt-4 text-xs text-bark-light/50">Boulder, CO only for now. No spam. Unsubscribe any time.</p>
         </div>
