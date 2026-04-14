@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
-        <Script src="https://harnesshealth.ai/footer.js" data-brand="fillforward" data-theme="light" strategy="lazyOnload" /></body>
+        <Script src="https://harnesshealth.ai/footer.js?v=8" data-brand="fillforward" data-theme="light" strategy="lazyOnload" /></body>
     </html>
   );
 }
