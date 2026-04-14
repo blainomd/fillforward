@@ -70,13 +70,39 @@ export default function Home() {
             Community-owned.
           </p>
 
-          <div className="mt-10 flex justify-center">
-            <a
-              href="#notify"
-              className="px-8 py-4 rounded-full text-lg font-medium bg-amber-dark text-white hover:bg-bark transition-colors"
-            >
-              Join the Boulder waitlist
-            </a>
+          <div className="mt-10 max-w-md mx-auto">
+            {submitted ? (
+              <div className="bg-amber-50 border border-amber-light/50 rounded-2xl p-6">
+                <p className="font-bold text-bark text-lg mb-1">You&apos;re on the list.</p>
+                <p className="text-bark-light text-sm">We&apos;ll be in touch when the first tap opens in Boulder.</p>
+              </div>
+            ) : (
+              <>
+                <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3 w-full">
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    disabled={submitting}
+                    aria-label="Email address for Boulder waitlist"
+                    className="flex-1 px-5 py-4 rounded-full border border-amber-light/50 bg-white text-bark placeholder:text-bark-light/40 focus:outline-none focus:ring-2 focus:ring-amber-dark/30 text-base disabled:opacity-60"
+                  />
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="px-7 py-4 rounded-full text-base font-medium bg-amber-dark text-white hover:bg-bark transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {submitting ? "Joining..." : "Join the waitlist"}
+                  </button>
+                </form>
+                {submitError && (
+                  <p className="mt-3 text-xs text-red-500">{submitError}</p>
+                )}
+                <p className="mt-3 text-xs text-bark-light/60">10 founding neighbors. Boulder only. No spam.</p>
+              </>
+            )}
           </div>
         </div>
       </section>
